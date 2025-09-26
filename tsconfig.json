@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "target": "ES2022",
+    "module":"NodeNext",
+    "moduleResolution":"NodeNext",
+    "strict": true,
+   
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
