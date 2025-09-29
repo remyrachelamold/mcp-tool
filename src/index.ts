@@ -85,6 +85,7 @@ server.tool(
       };
     } catch (e: any) {
       return {
+        isError: true,
         content: [
           { type: "text", text: `Error: ${e.message || e}` },
         ],
@@ -114,6 +115,7 @@ server.tool(
       };
     } catch(e) {
       return {
+        isError: true,
         content: [
           { type: "text", text: "Error: " + e }
         ]
@@ -138,6 +140,7 @@ server.tool(
       };
     } catch(e) {
       return {
+        isError: true,
         content: [
           { type: "text", text: "Error: " + e }
         ]
@@ -279,5 +282,5 @@ function getCatalogs() {
 
 mongoose
   .connect(process.env.MONGO_URI as string)
-  .then(() => console.log("✅ MCP Tool connected to MongoDB"))
-  .catch(err => console.error("❌ MCP Tool MongoDB connection error:", err));
+  .then(() => logger.info("✅ MCP Tool connected to MongoDB"))
+  .catch(err => logger.error("❌ MCP Tool MongoDB connection error:", err));
