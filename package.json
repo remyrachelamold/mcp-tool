@@ -18,7 +18,8 @@
     "express": "^5.1.0",
     "mongoose": "^8.18.2",
     "package-name": "^0.1.0",
-    "tsx": "^4.20.5"
+    "tsx": "^4.20.5",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

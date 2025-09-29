@@ -2,6 +2,8 @@ import express from "express";
 import mongoose from 'mongoose';
 import "dotenv/config";
 import { randomUUID } from "node:crypto";
+import { z } from "zod";
+import logger from "./logger.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { CallToolResult, isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
@@ -61,26 +63,31 @@ server.tool(
 );
 
 // Create item
+
 server.tool(
-  "create-item", "Create an item",
+  "create-item",
+  "Create an item",
   {
-    name: { type: "string" },
-    price: { type: "number" },
-    category: { type: "string" }
+    name: z.string().describe("Name of the item"),
+    price: z.number().describe("Price of the item"),
+    category: z.string().describe("Category of the item"),
   },
-  async({ name, price, category }): Promise<CallToolResult> => {
+  async ({ name, price, category }): Promise<CallToolResult> => {
     try {
       const result = await addCatalogItem({ name, price, category });
       return {
         content: [
-          { type: "text", text: JSON.stringify(result) }
-        ]
+          {
+            type: "text",
+            text: `Item created successfully!\n${JSON.stringify(result, null, 2)}`
+          },
+        ],
       };
-    } catch(e) {
+    } catch (e: any) {
       return {
         content: [
-          { type: "text", text: "Error: " + e }
-        ]
+          { type: "text", text: `Error: ${e.message || e}` },
+        ],
       };
     }
   }
@@ -89,13 +96,15 @@ server.tool(
 // Update item
 server.tool(
   "update-item", "Update an item",
-  {
-    id: { type: "string" },
-    name: { type: "string" },
-    price: { type: "number" },
-    category: { type: "string" }
+ {
+    id: z.string().describe("ID of the item"),
+    name: z.string().optional().describe("Updated name (optional)"),
+    price: z.number().optional().describe("Updated price (optional)"),
+    category: z.string().optional().describe("Updated category (optional)"),
   },
-  async({ id, name, price, category }): Promise<CallToolResult> => {
+  async ({
+    id, name, price, category
+  }: { id: string; name?: string; price?: number; category?: string }): Promise<CallToolResult> => {
     try {
       const result = await updateCatalogItem({ id, data:{name, price, category }});
       return {
@@ -117,9 +126,9 @@ server.tool(
 server.tool(
   "delete-item", "Delete an item",
   {
-    id: { type: "string" }
+    id: z.string().describe("ID of the item"),
   },
-  async({ id }): Promise<CallToolResult> => {
+  async ({ id }: { id: string }): Promise<CallToolResult> => {
     try {
       const result = await deleteCatalogItem({ id });
       return {
@@ -262,7 +271,7 @@ app.delete("/mcp", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("✅ MCP Echo Server running at http://localhost:3000/mcp");
+  logger.info("✅ MCP Echo Server running at http://localhost:3000/mcp");
 });
 function getCatalogs() {
   throw new Error("Function not implemented.");
