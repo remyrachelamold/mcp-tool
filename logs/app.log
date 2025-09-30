@@ -12,3 +12,5 @@ info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"202
 info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-09-30T07:31:02.657Z"}
 info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-09-30T07:38:23.677Z"}
 info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-09-30T07:38:24.225Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-09-30T07:39:36.389Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-09-30T07:39:38.249Z"}
