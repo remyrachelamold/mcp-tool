@@ -111,23 +111,18 @@ server.tool(
   "update-item", "Update an item",
  {
     id: z.string().describe("ID of the item"),
-    name: z.string().describe("Updated name "),
-    price: z.number().describe("Updated price "),
-    category: z.string().describe("Updated category "),
+    name: z.string().optional().describe("Updated name "),
+    price: z.number().optional().describe("Updated price "),
+    category: z.string().optional().describe("Updated category "),
   },
   async ({
     id, name, price, category
   }: { id: string; name?: string; price?: number; category?: string }): Promise<CallToolResult> => {
-  const missingFields = [];
-  if (!id) missingFields.push('id');
-  if (!name) missingFields.push('name');
-  if (!price) missingFields.push('price');
-  if (!category) missingFields.push('category');
-  if (missingFields.length > 0) {
+  if (!id) {
     return {
       isError: true,
       content: [
-        { type: "text", text: `Field(s) required: ${missingFields.join(', ')}` }
+        { type: "text", text: "Field 'id' is required"} 
       ]
     };
   }
