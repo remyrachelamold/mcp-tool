@@ -73,6 +73,18 @@ server.tool(
     category: z.string().describe("Category of the item"),
   },
   async ({ name, price, category }): Promise<CallToolResult> => {
+    const missingFields = [];
+  if (!name) missingFields.push('name');
+  if (!price) missingFields.push('price');
+  if (!category) missingFields.push('category');
+  if (missingFields.length > 0) {
+    return {
+      isError: true,
+      content: [
+        { type: "text", text: `Field(s) required: ${missingFields.join(', ')}` }
+      ]
+    };
+  }
     try {
       const result = await addCatalogItem({ name, price, category });
       return {
@@ -99,13 +111,26 @@ server.tool(
   "update-item", "Update an item",
  {
     id: z.string().describe("ID of the item"),
-    name: z.string().optional().describe("Updated name (optional)"),
-    price: z.number().optional().describe("Updated price (optional)"),
-    category: z.string().optional().describe("Updated category (optional)"),
+    name: z.string().describe("Updated name "),
+    price: z.number().describe("Updated price "),
+    category: z.string().describe("Updated category "),
   },
   async ({
     id, name, price, category
   }: { id: string; name?: string; price?: number; category?: string }): Promise<CallToolResult> => {
+  const missingFields = [];
+  if (!id) missingFields.push('id');
+  if (!name) missingFields.push('name');
+  if (!price) missingFields.push('price');
+  if (!category) missingFields.push('category');
+  if (missingFields.length > 0) {
+    return {
+      isError: true,
+      content: [
+        { type: "text", text: `Field(s) required: ${missingFields.join(', ')}` }
+      ]
+    };
+  }
     try {
       const result = await updateCatalogItem({ id, data:{name, price, category }});
       return {
