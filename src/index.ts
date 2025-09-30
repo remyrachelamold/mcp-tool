@@ -173,100 +173,7 @@ server.tool(
     }
   }
 );
-    // Get all items
-    // server.tool("getCatalogs", {
-    //   input: {
-    //     type: "object",
-    //     properties: {},
-    //     required: []
-    //   },
-    //   output: {
-    //     type: "object",
-    //     properties: {
-    //       output: { type: "array", items: { type: "object" }, description: "Catalog items" }
-    //     },
-    //     required: ["output"]
-    //   },
-    //   handler: async () => {
-    //     console.log("Calling getCatalogs")
-    //     try{
-    //       const data = await getCatalogs();
-    //        return { output: data };
-    //     }
-    //     catch(e){
-    //       console.log(e);
-    //     }
-    //   }
-    // } as any);
-
-    // // Add an item
-    // server.tool("addCatalogItem", {
-    //   input: {
-    //     type: "object",
-    //     properties: {
-    //       name: { type: "string" },
-    //       price: { type: "number" },
-    //       category: { type: "string" }
-    //     },
-    //     required: ["name", "price", "category"]
-    //   },
-    //   output: {
-    //     type: "object",
-    //     properties: {
-    //       output: { type: "object", description: "Added catalog item" }
-    //     },
-    //     required: ["output"]
-    //   },
-    //   handler: async (input: { name: string, price: number, category: string }) => {
-    //     const data = await addCatalogItem(input);
-    //     return { output: data };
-    //   }
-    // } as any);
-
-    // server.tool("updateCatalogItem", {
-    //   input: {
-    //     type: "object",
-    //     properties: {
-    //       id: { type: "string" },
-    //       data: { type: "object" },
-    //     },
-    //     required: ["id", "data"]
-    //   },
-    //   output: {
-    //     type: "object",
-    //     properties: {
-    //       output: { type: "object", description: "updated item or result" }
-    //     },
-    //     required: ["output"]
-    //   },
-    //   handler: async (input: { id:string, data:object }) => {
-    //     const updated = await updateCatalogItem(input);
-    //     return { output: updated };
-    //   }
-    // } as any);
-
-    // // Delete an item by id
-    // server.tool("deleteCatalogItem", {
-    //   input: {
-    //     type: "object",
-    //     properties: {
-    //       id: { type: "string" }
-    //     },
-    //     required: ["id"]
-    //   },
-    //   output: {
-    //     type: "object",
-    //     properties: {
-    //       output: { type: "object", description: "Delete result or item" }
-    //     },
-    //     required: ["output"]
-    //   },
-    //   handler: async (input: { id: string }) => {
-    //     const data = await deleteCatalogItem(input);
-    //     return { output: data };
-    //   }
-    // } as any);
-
+  
     await server.connect(transport);
   } else {
     res.status(400).json({
@@ -276,7 +183,6 @@ server.tool(
     });
     return;
   }
-
   await transport.handleRequest(req, res, req.body);
 });
 
