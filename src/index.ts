@@ -126,8 +126,21 @@ server.tool(
       ]
     };
   }
+  const updateData:Record<string,any>={};
+  if (typeof name === "string" && name.trim().length > 0)updateData.name=name;
+  if (typeof price === "number" && ! isNaN(price))updateData.price=price;
+  if (typeof category === "string" && category.trim().length > 0)updateData.category=category;
+  if (Object.keys(updateData).length === 0){
+    return {
+      isError: true,
+      content: [
+        { type: "text", text: "Provide at least one field to update "} 
+      ]
+    };
+  }
+  
     try {
-      const result = await updateCatalogItem({ id, data:{name, price, category }});
+      const result = await updateCatalogItem({ id, data: updateData});
       return {
         content: [
           { type: "text", text: JSON.stringify(result) }
@@ -155,7 +168,7 @@ server.tool(
       const result = await deleteCatalogItem({ id });
       return {
         content: [
-          { type: "text", text: JSON.stringify(result) }
+          { type: "text", text: "Item deleted successfully" }
         ]
       };
     } catch(e) {
