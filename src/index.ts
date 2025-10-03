@@ -9,9 +9,32 @@ import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/
 import { CallToolResult, isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
 import {addCatalogItem, updateCatalogItem, getCatalog, deleteCatalogItem} from "./controllers/itemController.js";
 import { text } from "node:stream/consumers";
+const PORT=process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
+
+
+import dotenv from "dotenv";
+import catalog from "./routes/catalog.js";
+import { userInfo } from "os";
+
+dotenv.config();
+
+
+// Middleware
+app.use(express.json());
+app.use('/catalogs',catalog );
+//app.get("/",async(req,res)=>{
+//console.log("Hello");
+//  res.send("Hiii");
+//})
+//OPTIONS route 
+app.options("/items", (req, res) => {
+  res.set("Allow", "GET,POST,PUT,DELETE,OPTIONS").send();
+});
+
+
 
 const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 
@@ -214,6 +237,7 @@ app.delete("/mcp", async (req, res) => {
 
 app.listen(3000, () => {
   logger.info("✅ MCP Echo Server running at http://localhost:3000/mcp");
+  logger.info(`🚀 Server running at http://localhost:3000`);
 });
 function getCatalogs() {
   throw new Error("Function not implemented.");
@@ -223,3 +247,5 @@ mongoose
   .connect(process.env.MONGO_URI as string)
   .then(() => logger.info("✅ MCP Tool connected to MongoDB"))
   .catch(err => logger.error("❌ MCP Tool MongoDB connection error:", err));
+
+  export default app;

@@ -30,3 +30,100 @@ info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"202
 error: ❌ MCP Tool MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/ {"cause":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-fq9ylrs-shard-00-00.qqaz02e.mongodb.net:27017":{"$clusterTime":null,"address":"ac-fq9ylrs-shard-00-00.qqaz02e.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":413604925,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-fq9ylrs-shard-00-01.qqaz02e.mongodb.net:27017":{"$clusterTime":null,"address":"ac-fq9ylrs-shard-00-01.qqaz02e.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":413604927,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-fq9ylrs-shard-00-02.qqaz02e.mongodb.net:27017":{"$clusterTime":null,"address":"ac-fq9ylrs-shard-00-02.qqaz02e.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":413604892,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-uh3f11-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"errorLabelSet":{},"reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-fq9ylrs-shard-00-00.qqaz02e.mongodb.net:27017":{"$clusterTime":null,"address":"ac-fq9ylrs-shard-00-00.qqaz02e.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":413604925,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-fq9ylrs-shard-00-01.qqaz02e.mongodb.net:27017":{"$clusterTime":null,"address":"ac-fq9ylrs-shard-00-01.qqaz02e.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":413604927,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-fq9ylrs-shard-00-02.qqaz02e.mongodb.net:27017":{"$clusterTime":null,"address":"ac-fq9ylrs-shard-00-02.qqaz02e.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":413604892,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-uh3f11-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (D:\\mcp-tool\\node_modules\\mongoose\\lib\\connection.js:1165:11)\n    at NativeConnection.openUri (D:\\mcp-tool\\node_modules\\mongoose\\lib\\connection.js:1096:11)","timestamp":"2025-10-01T05:16:10.664Z"}
 info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T05:18:53.848Z"}
 info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T05:18:54.481Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T05:33:45.728Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T05:33:46.642Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T06:43:31.954Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T06:43:32.565Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T06:46:48.580Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T06:46:49.496Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T07:01:01.789Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T07:01:02.402Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T08:30:12.475Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T08:30:13.260Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T08:35:38.901Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T08:35:40.031Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T08:57:07.356Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T08:57:08.140Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:21:16.926Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:21:17.564Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:34:38.557Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:34:39.580Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:35:42.138Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:35:45.147Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:38:16.019Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T09:38:16.026Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:38:16.756Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:38:44.164Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T09:38:44.171Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:38:44.774Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:39:52.617Z"}
+info: 🚀 Server running at http://localhost:3000/catallog {"timestamp":"2025-10-01T09:39:52.624Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:40:00.941Z"}
+info: 🚀 Server running at http://localhost:3000/catalogs {"timestamp":"2025-10-01T09:40:00.947Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:40:01.559Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T09:40:14.687Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T09:40:14.693Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T09:40:15.352Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:31:45.102Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:31:45.108Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:31:45.720Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:49:03.049Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:49:03.055Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:49:03.669Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:49:27.998Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:49:28.011Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:49:28.614Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:49:45.328Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:49:45.337Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:49:45.931Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:50:29.910Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:50:29.919Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:50:30.701Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:50:38.591Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:50:38.608Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:50:43.872Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:50:43.897Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:50:44.516Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:53:44.618Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:53:44.624Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:53:47.235Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:53:55.648Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:53:55.653Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:53:56.253Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:58:56.281Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:58:56.286Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:58:56.881Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:59:00.702Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:59:00.712Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:59:01.393Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:59:08.027Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:59:08.036Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:59:10.665Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:59:10.670Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:59:11.269Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T10:59:19.387Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T10:59:19.394Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T10:59:22.078Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:07:12.420Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:07:12.425Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T11:07:13.204Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:09:24.063Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:09:24.069Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T11:09:25.813Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:11:00.303Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:11:00.310Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:11:21.075Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:11:21.081Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T11:11:21.731Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:11:24.528Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:11:24.536Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T11:11:27.630Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:11:59.455Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:11:59.460Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T11:12:00.054Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-01T11:12:28.172Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-01T11:12:28.184Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-01T11:12:28.780Z"}
+info: ✅ MCP Echo Server running at http://localhost:3000/mcp {"timestamp":"2025-10-02T12:13:03.051Z"}
+info: 🚀 Server running at http://localhost:3000 {"timestamp":"2025-10-02T12:13:03.064Z"}
+info: ✅ MCP Tool connected to MongoDB {"timestamp":"2025-10-02T12:13:03.848Z"}

@@ -29,7 +29,9 @@ export async function updateCatalogItem(input: { id: string, data: any }) {
 // -------- Express Route Handlers (for HTTP API) --------
 // Get filtered items (API)
 export const getFilteredItems = async (req: Request, res: Response) => {
+    console.log("HI");
     try {
+        console.log("gstring");
         const filter: any = {};
         if (req.query.category) filter.category = req.query.category;
         if (req.query.name) filter.name = req.query.name;
