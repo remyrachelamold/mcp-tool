@@ -14,27 +14,20 @@ const PORT=process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
 
-
 import dotenv from "dotenv";
 import catalog from "./routes/catalog.js";
 import { userInfo } from "os";
 
 dotenv.config();
 
-
 // Middleware
 app.use(express.json());
 app.use('/catalogs',catalog );
-//app.get("/",async(req,res)=>{
-//console.log("Hello");
-//  res.send("Hiii");
-//})
+
 //OPTIONS route 
 app.options("/items", (req, res) => {
   res.set("Allow", "GET,POST,PUT,DELETE,OPTIONS").send();
 });
-
-
 
 const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 
@@ -86,7 +79,6 @@ server.tool(
 );
 
 // Create item
-
 server.tool(
   "create-item",
   "Create an item",
